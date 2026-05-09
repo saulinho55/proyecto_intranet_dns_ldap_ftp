@@ -1,0 +1,83 @@
+dn: dc=centro,dc=local
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: centro
+dc: centro
+
+dn: ou=usuarios,dc=centro,dc=local
+objectClass: organizationalUnit
+objectClass: top
+ou: usuarios
+
+dn: ou=grupos,dc=centro,dc=local
+objectClass: organizationalUnit
+objectClass: top
+ou: grupos
+
+dn: cn=profesores,ou=grupos,dc=centro,dc=local
+objectClass: groupOfNames
+objectClass: top
+cn: profesores
+member: uid=profsaul,ou=usuarios,dc=centro,dc=local
+member: uid=profmarisa,ou=usuarios,dc=centro,dc=local
+
+dn: cn=alumnos,ou=grupos,dc=centro,dc=local
+objectClass: groupOfNames
+objectClass: top
+cn: alumnos
+member: uid=saul,ou=usuarios,dc=centro,dc=local
+member: uid=marisa,ou=usuarios,dc=centro,dc=local
+
+dn: uid=saul,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+cn: saul
+sn: espino
+uid: saul
+userPassword: {SSHA}9E91v0maen1AzjXnsdwmXNjVlxLYaD7y
+uidNumber: 10001
+gidNumber: 5002
+homeDirectory: /srv/ftp/publicaciones/alumnos/saul
+loginShell: /bin/bash
+
+dn: uid=marisa,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+cn: marisa
+sn: apellido
+uid: marisa
+userPassword: {SSHA}9E91v0maen1AzjXnsdwmXNjVlxLYaD7y
+uidNumber: 10002
+gidNumber: 5002
+homeDirectory: /srv/ftp/publicaciones/alumnos/marisa
+loginShell: /bin/bash
+
+dn: uid=profsaul,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+cn: profsaul
+sn: prof_saul
+uid: profsaul
+userPassword: {SSHA}9E91v0maen1AzjXnsdwmXNjVlxLYaD7y
+uidNumber: 11001
+gidNumber: 5001
+homeDirectory: /srv/ftp/publicaciones/profesores/profsaul
+loginShell: /bin/bash
+
+dn: uid=profmarisa,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+cn: profmarisa
+sn: prof_marisa
+uid: profmarisa
+userPassword: {SSHA}9E91v0maen1AzjXnsdwmXNjVlxLYaD7y
+uidNumber: 11002
+gidNumber: 5001
+homeDirectory: /srv/ftp/publicaciones/profesores/profmarisa
+loginShell: /bin/bash
+
