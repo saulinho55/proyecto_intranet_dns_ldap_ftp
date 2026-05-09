@@ -1,2 +1,2 @@
-# Proyecto-FTP-Saul-y-Marisa
-Proyecto FTP-Saul y Marisa
+# Proyecto_Intranet_DNS_LDAP_FTP
+Proyecto_Intranet_DNS_LDAP_FTP
